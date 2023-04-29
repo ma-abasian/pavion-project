@@ -1,0 +1,112 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Flex";
+  src: url("fonts/Flex.eot?cmjl5a");
+  src: url("fonts/Flex.eot?cmjl5a#iefix") format("embedded-opentype"), url("fonts/Flex.ttf?cmjl5a") format("truetype"), url("fonts/Flex.woff?cmjl5a") format("woff"), url("fonts/Flex.svg?cmjl5a#Flex") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.flex {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "Flex" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.flex-left-arrow:before {
+  content: "";
+  color: #035af5;
+}
+
+.flex-right-arrow:before {
+  content: "";
+  color: #035af5;
+}
+
+.flex-call:before {
+  content: "";
+  color: #025af5;
+}
+
+.flex-instagram:before {
+  content: "";
+  color: #dddddd;
+}
+
+.flex-linkedin:before {
+  content: "";
+  color: #dddddd;
+}
+
+.flex-twitter:before {
+  content: "";
+  color: #dddddd;
+}
+
+.flex-whatsapp:before {
+  content: "";
+  color: #dddddd;
+}
+
+.flex-arrow:before {
+  content: "";
+  color: #919191;
+}
+
+.flex-card:before {
+  content: "";
+  color: #21c38b;
+}
+
+.flex-icons8-key:before {
+  content: "";
+}
+
+.flex-play:before {
+  content: "";
+  color: #fff;
+}
+
+.flex-profile:before {
+  content: "";
+  color: #fff;
+}
+
+.flex-profile-blue:before {
+  content: "";
+  color: #025af5;
+}
+
+.flex-search:before {
+  content: "";
+  color: #025af5;
+}
+
+.flex-select-arrow:before {
+  content: "";
+  color: #505050;
+}
+
+.flex-time:before {
+  content: "";
+  color: #fff;
+}
+
+.flex-time-gray:before {
+  content: "";
+  color: #929292;
+}
+
+.flex-user:before {
+  content: "";
+  color: #1768f6;
+}

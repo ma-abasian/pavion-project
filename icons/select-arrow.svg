@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 7" width="12" height="7">
+	<title>cat</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #505050 } 
+	</style>
+	<g id="cat">
+		<path id="icon" class="shp0" d="M1.48 0.29C1.14 -0.09 0.59 -0.08 0.26 0.31C-0.06 0.69 -0.06 1.29 0.26 1.67L4.2 6.15C5.2 7.29 6.83 7.29 7.83 6.15L11.77 1.67C12.1 1.28 12.09 0.66 11.75 0.29C11.41 -0.08 10.89 -0.08 10.55 0.29L6.62 4.77C6.29 5.15 5.74 5.15 5.41 4.77L1.48 0.29Z" />
+	</g>
+</svg>

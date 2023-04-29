@@ -1,0 +1,376 @@
+// /*==============================================  css Reset ==============================================*/
+// * {
+//   direction: rtl;
+//   -webkit-box-sizing: border-box;
+//   -moz-box-sizing: border-box;
+//   box-sizing: border-box;
+//   padding: 0;
+//   margin: 0;
+// }
+// *:focus {
+//   outline: none !important;
+// }
+// audio,
+// video {
+//   display: inline-block;
+// }
+// audio:not([controls]) {
+//   display: none;
+//   height: 0;
+// }
+// h1 {
+//   font-size: 1.5rem;
+// }
+// h2 {
+//   font-size: 1.25rem;
+// }
+// h3 {
+//   font-size: 1.125rem;
+// }
+// h4 {
+//   font-size: 1rem;
+// }
+// h5 {
+//   font-size: 0.8125rem;
+// }
+// h6 {
+//   font-size: 0.9375rem;
+// }
+// p {
+//   margin: 0;
+//   padding: 0;
+// }
+// blockquote {
+//   font-size: 1.125rem;
+//   font-style: italic;
+//   line-height: 1.7;
+//   margin: 0;
+//   overflow: hidden;
+//   padding: 0;
+// }
+// blockquote cite {
+//   display: block;
+//   font-style: normal;
+//   font-weight: 600;
+//   margin-top: 0.5em;
+// }
+// address {
+//   margin: 0 0 1.5em;
+// }
+// pre {
+//   background: #eee;
+//   font-family: "Courier 10 Pitch", Courier, monospace;
+//   font-size: 0.9375rem;
+//   line-height: 1.6;
+//   margin-bottom: 1.6em;
+//   max-width: 100%;
+//   overflow: auto;
+//   padding: 1.6em;
+// }
+// code,
+// kbd,
+// tt,
+// var {
+//   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+//   font-size: 0.9375rem;
+// }
+// abbr,
+// acronym {
+//   border-bottom: 1px dotted #666;
+//   cursor: help;
+// }
+// mark,
+// ins {
+//   background: #eee;
+//   text-decoration: none;
+// }
+// big {
+//   font-size: 125%;
+// }
+// blockquote {
+//   quotes: "" "";
+// }
+// q {
+//   quotes: "“" "”" "‘" "’";
+// }
+// blockquote:before,
+// blockquote:after {
+//   content: "";
+// }
+// label {
+//   color: #333;
+//   display: block;
+//   font-weight: 800;
+//   margin-bottom: 0.5em;
+// }
+// fieldset {
+//   margin-bottom: 1em;
+// }
+// select {
+//   border: 1px solid #bbb;
+//   -webkit-border-radius: 3px;
+//   border-radius: 3px;
+//   height: 3em;
+//   max-width: 100%;
+// }
+// b,
+// strong {
+//   font-weight: bold;
+// }
+// html {
+//   overflow-x: hidden;
+//   -webkit-text-size-adjust: 100%;
+//   -ms-text-size-adjust: 100%;
+//   -ms-overflow-style: scrollbar;
+// }
+// body {
+//   font-family: iranyekan;
+//   direction: rtl;
+//   line-height: 1.5;
+//   font-weight: 500;
+//   position: relative;
+// }
+// input,
+// textarea,
+// button,
+// select {
+//   font-family: iranyekan;
+//   transition: 0.3s;
+//   -webkit-transition: 0.3s;
+//   -moz-transition: 0.3s;
+//   -o-transition: 0.3s;
+// }
+// button,
+// input[type="submit"] {
+//   cursor: pointer;
+//   border: none;
+// }
+// a {
+//   text-decoration: none;
+//   transition: 0.3s;
+//   -webkit-transition: 0.3s;
+//   -moz-transition: 0.3s;
+//   -o-transition: 0.3s;
+//   color: #4f4f4f;
+// }
+// ul {
+//   list-style: none;
+// }
+// dl,
+// ol,
+// ul {
+//   margin-top: 0;
+//   margin-bottom: 0;
+// }
+// main {
+//   min-height: 245px;
+// }
+// /*===================== [ color (sass) ] ===========================*/
+
+$pvn-blue0: #025af5;
+$pvn-blue1: #1768f6;
+$pvn-gray: #929292;
+$pvn-gray-dark: #505050;
+$pvn-gray-md: #ebf2ff;
+$pvn-bg-green: #ecfcfb;
+$pvn-bg-red: #fef5f6;
+$pvn-bg-yellow: #fcf9ec;
+$pvn-bg-blue: #ecf7fc;
+$pvn-bg-white: #ffffff;
+// /*======================= [ mixed-in (sass) ] ============================*/
+/*_ mixed-in for ( display=flex; flex=1;)_*/
+@mixin flex-1 {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -moz-flex;
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
+  flex: 1;
+  -webkit-flex: 1;
+  -webkit-box-flex: 1;
+  -moz-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+}
+/*_ mixed-in for ( display=flex;)_*/
+@mixin flex {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -moz-flex;
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
+  display: flex;
+}
+/*_ mixed-in for ( display=flex; - up to down = center , right to left = center )_*/
+@mixin flex-center-center {
+  @include flex;
+  @include align-items(center);
+  @include justify-content(center);
+}
+/*_ mixed-in for ( display=flex; - up to down = center , right to left = space-between )_*/
+@mixin flex-center-between {
+  @include flex;
+  @include align-items(center);
+  @include justify-content(space-between);
+}
+@mixin flex-start-between {
+  @include flex;
+  @include align-items(flex-start);
+  @include justify-content(space-between);
+}
+@mixin justify-self-flex-end {
+  @include flex;
+  justify-self: flex-end;
+}
+@mixin flex-direction($direction: row) {
+  @if $direction==row-reverse {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: horizontal;
+    -moz-box-direction: reverse;
+    -moz-box-orient: horizontal;
+  } @else if $direction==column {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: normal;
+    -moz-box-orient: vertical;
+  } @else if $direction==column-reverse {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: reverse;
+    -moz-box-orient: vertical;
+  } @else {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -moz-box-orient: horizontal;
+  }
+
+  -webkit-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+@mixin flex-basis($value: auto) {
+  -webkit-flex-basis: $value;
+  -moz-flex-basis: $value;
+  -ms-flex-preferred-size: $value;
+  flex-basis: $value;
+}
+@mixin justify-content($value: flex-start) {
+  @if $value==flex-start {
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+  } @else if $value==flex-end {
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+  } @else if $value==space-between {
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+  } @else if $value==space-around {
+    -ms-flex-pack: distribute;
+  } @else {
+    -webkit-box-pack: $value;
+    -moz-box-pack: $value;
+    -ms-flex-pack: $value;
+  }
+  -webkit-justify-content: $value;
+  justify-content: $value;
+}
+@mixin align-items($value: stretch) {
+  @if $value==flex-start {
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+  } @else if $value==flex-end {
+    -webkit-box-align: end;
+    -moz-box-align: end;
+    -ms-flex-align: end;
+  } @else {
+    -webkit-box-align: $value;
+    -moz-box-align: $value;
+    -ms-flex-align: $value;
+  }
+
+  -webkit-align-items: $value;
+  -moz-box-align: $value;
+  -ms-flex-align: $value;
+  align-items: $value;
+}
+@mixin align-self($value: auto) {
+  // No Webkit Box Fallback.
+  -webkit-align-self: $value;
+
+  @if $value==flex-start {
+    -ms-flex-item-align: start;
+  } @else if $value==flex-end {
+    -ms-flex-item-align: end;
+  } @else {
+    -ms-flex-item-align: $value;
+  }
+
+  align-self: $value;
+}
+@mixin flex-wrap($value: nowrap) {
+  // No Webkit Box fallback.
+  -webkit-flex-wrap: $value;
+  -moz-flex-wrap: $value;
+
+  @if $value==nowrap {
+    -ms-flex-wrap: none;
+  } @else {
+    -ms-flex-wrap: $value;
+  }
+
+  flex-wrap: $value;
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  -moz-transform: $property;
+  -o-transform: $property;
+  transform: $property;
+}
+/*_ mixed-in for ( transition effect )_*/
+@mixin transition3 {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+/*_ mixed-in for ( transition effect )_*/
+@mixin transition4 {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+// @mixin inline-flex {
+//   display: -webkit-inline-flex; /* OLD - iOS 6-, Safari 3.1-6 */ /* NEW - Chrome */
+//   display: -webkit-inline-box; /* dont delet ! this is important for safari */
+//   display: -moz-inline-box; /* OLD - Firefox 19- (buggy but mostly works) */
+//   display: -ms-inline-flexbox; /* TWEENER - IE 10 */
+//   display: inline-flex;
+// }
+/*============================ [ breakpoints for responsive in sass ] ==================================*/
+/* xsm--Extra small  (smart phones, portrait iPhone, portrait 480x320 phones (Android)) */
+
+$break-2xsm: "(max-width: 346px)";
+/* xsm--smart phones, Android phones, landscape iPhone */
+$break-xsm: "(max-width: 480px)";
+/* sm--smart phones, Android phones, landscape iPhone */
+$break-sm: "(max-width:  576px)";
+/* md-- tablet, landscape iPad, lo-res laptops ands desktops */
+$break-md: "(max-width: 768px)";
+/* lg-- hi-res laptops and desktops */
+$break-lg: "(max-width:  992px)";
+/* xl-- hi-res laptops and desktops */
+$break-xl: "(max-width: 1140px)";
+/* 2xl -- Extra large screens, TV */
+$break-2xl: "(max-width: 1200px)";
+/* 3xl -- Extra large screens, TV */
+$break-3xl: "(max-width: 1400px)";
+/* 4xl -- Extra large screens, TV */
+$break-4xl: "(max-width: 1800px)";
